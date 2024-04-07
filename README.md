@@ -10,6 +10,11 @@ before running the front end, dont forget to run the backend
 ### not done yet
 - pagination
 
+### notes
+- you cannot go to another page before logging in, if you dont log in you will be redirected lo login page
+- if your token expires you will be asked to login
+- donot forget register through 
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
