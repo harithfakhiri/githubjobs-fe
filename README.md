@@ -3,8 +3,9 @@ run *npm i* to install all dependencies
 
 before running the front end, dont forget to run the backend
 
-npm run dev to run in local/dev
-npm run build to build
+*npm run dev* to run in local/dev
+
+*npm run build* to build
 
 ### not done yet
 - pagination

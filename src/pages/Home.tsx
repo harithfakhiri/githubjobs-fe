@@ -45,13 +45,11 @@ const Home = () => {
   };
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // Construct search query based on input values
     const query = {
       desc,
       location,
       fullTime: isFulltime ? "full time" : "",
     };
-    // Pass the query to the parent component for handling search
     filterJobs(query);
   };
   const navigate = useNavigate();

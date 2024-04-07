@@ -12,15 +12,15 @@ export const login = async (
       "http://localhost:5400/api/login",
       { username: uname, password: pass }
     );
-    console.log(res); // Log the response data
+    console.log(res);
     return { data: res.data, status: res.status, headers: res.headers };
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      console.error("Axios Error:", error); // Log any Axios errors
-      throw error.response?.data.err_msg; // Rethrow the error
+      console.error("Axios Error:", error);
+      throw error.response?.data.err_msg;
     } else {
-      console.error("Other Error:", error); // Log other types of errors
-      throw error; // Rethrow the error
+      console.error("Other Error:", error); 
+      throw error; 
     }
   }
 };
@@ -49,11 +49,11 @@ export const getAllJobs = async (): Promise<GetJobsResponse> => {
     }
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      console.error("Axios Error:", error); // Log any Axios errors
-      throw error.response?.status; // Rethrow the error
+      console.error("Axios Error:", error); 
+      throw error.response?.status; 
     } else {
-      console.error("Other Error:", error); // Log other types of errors
-      throw error; // Rethrow the error
+      console.error("Other Error:", error); 
+      throw error; 
     }
   }
 };
@@ -94,11 +94,11 @@ export const searchJobs = async (queryParams?: any): Promise<GetJobsResponse> =>
     }
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      console.error("Axios Error:", error); // Log any Axios errors
-      throw error.response?.status; // Rethrow the error
+      console.error("Axios Error:", error); 
+      throw error.response?.status;
     } else {
-      console.error("Other Error:", error); // Log other types of errors
-      throw error; // Rethrow the error
+      console.error("Other Error:", error); 
+      throw error; 
     }
   }
 };
@@ -128,11 +128,11 @@ export const getJobData = async (id: string): Promise<GetJobsResponse> => {
     }
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      console.error("Axios Error:", error); // Log any Axios errors
-      throw error.response?.status; // Rethrow the error
+      console.error("Axios Error:", error);
+      throw error.response?.status;
     } else {
-      console.error("Other Error:", error); // Log other types of errors
-      throw error; // Rethrow the error
+      console.error("Other Error:", error); 
+      throw error; 
     }
   }
 };

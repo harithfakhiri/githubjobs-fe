@@ -13,7 +13,7 @@ const Login = () => {
     if (jwtToken) {
       sessionStorage.removeItem("jwtToken"); // Remove token if it exists
     }
-  }, []); // Empty dependency array to run once on component mount
+  }, []); 
 
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault();
@@ -27,9 +27,7 @@ const Login = () => {
         alert("Invalid password or email");
       }
     } catch (error) {
-      // Handle error here
       console.error("Error logging in:", error);
-      // Display an error message to the user
       alert("Error logging in: " + error);
     }
   };

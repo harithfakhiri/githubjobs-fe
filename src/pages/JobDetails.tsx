@@ -16,7 +16,6 @@ const JobDetails = () => {
     title: "",
     description: "",
     how_to_apply: "",
-    // Add other properties with default values as needed
   };
   const [jobdata, setJobData] = useState<JobAttributes>(defaultJobData);
   const { id } = useParams<{ id?: string }>();
@@ -49,7 +48,7 @@ const JobDetails = () => {
     if (id) {
       getDetail(id);
     }
-  }, [id, navigate]); // Include navigate in dependency array
+  }, [id, navigate]); 
 
   return (
     <div className="py-6">
